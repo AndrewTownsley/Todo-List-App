@@ -11,31 +11,34 @@ body {
   background: #D7F3FF;
 }
 
+/* -----------------------------------------------CONTAINER------------------------------- */
+
 .task-container {
   margin: 4rem auto;
   background: #002953;
   max-width:max-content;
   min-height: 75vh;
   color: #fff;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .task-container header {
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 
 .task-container header h1 {
   border-bottom: 1px solid #fff;
   font-weight: 200;
-
 }
 
+/* ---------------------------------------------INPUT------------------------------------------- */
 
 .input-container {
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 3rem;
+  padding: 2rem;
 }
 
 .input-container input {
@@ -63,4 +66,18 @@ body {
 
 .add-btn:hover {
   background: #001B42;
+}
+
+/* ----------------------------------------TASK-LIST & TASKS----------------------------------- */
+
+.task-list {
+  width: 100%;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.task {
+  background: #043464;
+  padding: 0.8rem 2rem;
+  margin-bottom: 5px;
 }

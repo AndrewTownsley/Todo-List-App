@@ -22,3 +22,8 @@ const addTask = (e) => {
 
 // Event Listeners
 addBtn.addEventListener('click', addTask);
+addBtn.addEventListener('keydown',function(e){
+  if (13 == e.key) {
+  console.log("enter enter");
+}  
+});
