@@ -4,11 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>todo-list app</title>
+  <title>task-list app</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
   <script defer src="app.js"></script>
 </head>
 <body>
+<div class="task-container">
+  <header>
+    <h1>Task Organizer</h1>
+  </header>
+
+  <div class="input-container">
+    <label for="task-input" name="Add task"></label>
+      <input type="text" id="task-input" placeholder="Add task...">
+    <button class="add-btn" id="add-btn">Add</button>
+  </div>
+
+    <ul class="task-list" id="task-list">
+
+    </ul>
   
+</div>
 </body>
 </html>
