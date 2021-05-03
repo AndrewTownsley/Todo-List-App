@@ -76,12 +76,51 @@ body {
   margin: 1rem 0;
 }
 
+.task-div {
+  display: flex;
+  justify-content: center;
+  align-items:baseline;
+}
+
 .task {
   background: #043464;
   padding: 0.8rem 2rem;
   margin-bottom: 5px;
+  width: 100%;
+  height: 100%;
 }
 
 .remove {
   display: none;
+}
+
+/* -----------------------------------COMPLETE / DELETE BUTTONS */
+
+.complete-btn,
+.delete-btn {
+  background: #043464;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.94rem 1rem 0.8rem 1rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+.complete-btn {
+  color: #0DB387;
+}
+
+.delete-btn {
+  color: #f64c72;
+}
+
+.complete-btn:hover,
+.delete-btn:hover {
+  background: #001B42;
+}
+
+.task-complete {
+  text-decoration: line-through;
+  font-style:italic;
+  color: #888;
 }

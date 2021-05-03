@@ -9,23 +9,39 @@ const addTask = (e) => {
 // Remove "empty" message when TASK is created
   empty.classList.add('remove');
 
-
 // Create the li element which will be the actual task
+  const taskDiv = document.createElement('div');
+  taskDiv.classList.add('task-div');
+  taskList.appendChild(taskDiv);
   const task = document.createElement('li');
   task.innerText = input.value;
   task.classList.add('task');
+  taskDiv.appendChild(task);
   // Append the  taskList / task to the DOM
-  taskList.appendChild(task);
 // Create the complete / delete buttons
-  
+  const completeBtn = document.createElement('button');
+  completeBtn.innerHTML = `<i class="far fa-check-square"></i>`;
+  completeBtn.classList.add('complete-btn');
+  taskDiv.appendChild(completeBtn);
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = `<i class="fas fa-times"></i>`;
+  deleteBtn.classList.add('delete-btn');
+  taskDiv.appendChild(deleteBtn);
 //Clear the input field after the TASK has been created
   input.value = '';  
+
 }
+
+const completeTask = (e) => {
+  let item = e.target;
+ if(item.classList[0] === 'complete-btn') {
+   let task = item.previousSibling;
+   task.classList.add('task-complete');
+   console.log('hello');
+ }
+}
+
 
 // Event Listeners
 addBtn.addEventListener('click', addTask);
-// addBtn.addEventListener('keydown',function(e){
-//   if (13 == e.key) {
-//   console.log("enter enter");
-// }  
-// });
+taskList.addEventListener('click', completeTask);
