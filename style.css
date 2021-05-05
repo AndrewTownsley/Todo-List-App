@@ -96,6 +96,11 @@ body {
 
 /* -----------------------------------COMPLETE / DELETE BUTTONS */
 
+.fas,
+.far {
+  pointer-events: none;
+}
+
 .complete-btn,
 .delete-btn {
   background: #043464;
